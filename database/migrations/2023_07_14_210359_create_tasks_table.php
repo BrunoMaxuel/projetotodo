@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->dateTime('duo_date');
             $table->foreignIdFor(User::class)->references('id')->on('users')->onDelete('CASCADE');
-            $table->foreignIdFor(category::class)->references('id')->on('categorie')->onDelete('cascade');
+            $table->foreignIdFor(category::class)->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
