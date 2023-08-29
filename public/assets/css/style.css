@@ -1,0 +1,295 @@
+:root {
+  --bg-light: #e9ecef;
+  --color-textDark: #0A0040;
+  --bg-white: #F6F5FF;
+  --color-primary: #495057;
+  --color-orange: #fe2919;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik, sans-serif;
+  color: var(--color-textDark);
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--bg-white);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.siderbar {
+  width: 100px;
+  height: 100vh;
+  background-color: var(--color-primary);
+}
+
+.siderbar img {
+  margin-top: 30px;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.siderbar .my_name {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-orange);
+  font-size: 13px;
+}
+
+nav {
+  height: 100px;
+  background-color: rgba(72, 80, 86, .08);
+  width: calc(100vw - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 20px;
+}
+.name_login{
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+.name_login p{
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+.btn {
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: var(--color-orange);
+  cursor: pointer;
+  color: #fff;
+}
+
+a.btn, button.btn {
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+main {
+  display: flex;
+  padding: 0px;
+}
+
+section.graph {
+  width: 33%;
+  height: 100%;
+  padding: 20px 20px 0 20px;
+}
+
+.graph_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  flex: 2;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.graph_header-line {
+  flex: 1;
+  width: 50%;
+  background-color: rgba(0, 0, 0, .2);
+  height: 2px;
+  margin-top: 16px;
+}
+
+.graph_header-date {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.graph_header-subtitle {
+  margin-top: 10px;
+}
+
+.graph_placeholder {
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  margin-left: 45px;
+  background: url('/assets/images/graph.png');
+  background-size: contain;
+}
+
+.tasks_left_footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.list {
+  padding: 20px 20px 0 20px;
+  flex: 1;
+}
+
+.list_header {
+  display: flex;
+}
+
+.list_header-select {
+  background-color: transparent;
+  border: 0;
+}
+
+.tasks_list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.taks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--bg-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.taks:hover {
+  transform: scale(1.05);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(254, 41, 25, .05);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.priority, .action {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+.action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action a {
+  margin-left: 20px;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.action > a:hover {
+  transform: scale(1.55);
+}
+
+.sphere {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tasks_title {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+#task_section {
+  margin: auto;
+  padding-top: 20px;
+}
+
+#task_section > h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input_area {
+  display: block;
+  margin: 10px 0 20px 0;
+}
+
+.input_area > label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input_area > input, .input_area > select {
+  height: 40px;
+  width: 400px;
+  padding: 5px;
+  color: var(--color-primary);
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: rgba(255,255,255,0.5);
+}
+.input_area > textarea{
+  height: 120px;
+  width: 400px;
+  padding: 5px;
+  color: var(--color-primary);
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: rgba(255,255,255,0.5);
+}
+.input_area > input:focus, .input_area > select:focus, .input_area > textarea:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+.btn_create{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.submit:hover{
+  background-color: green;
+}
+
+.alert li {
+  color: #fe2919;
+  list-style: none;
+}
