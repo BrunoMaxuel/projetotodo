@@ -1,5 +1,5 @@
 <div class="input_area">
-  <label for="{{$name}}">
+  <label class="label-input" for="{{$name}}">
     {{$label ?? ''}}
   </label>
   <input

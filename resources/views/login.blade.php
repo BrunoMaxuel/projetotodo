@@ -1,11 +1,11 @@
-<x-layout page-title="MDM Todo: Login" name-btn="Registre-se">
+<x-layout pageTitle="TodoDiaSoft Login">
   <x-slot:btn>
-    <x-button  href="{{route('register')}}" >Não Possui conta? Faça o Registo</x-button>
+    <x-button  href="{{route('register')}}" >Cadastrar - se</x-button>
   </x-slot:btn>
 
   <section id="task_section">
 
-    <h1>Logar-se</h1>
+    <h1>Fazer login</h1>
 
     @if($errors->any())
       <ul class="alert alert-error">
@@ -23,17 +23,17 @@
         name="email"
         type="email"
         required="required"
-        placeholder="Seu Email"
+        placeholder="Seu email"
       />
       <x-form.text_input
         label="Senha"
         name="password"
         type="password"
         required="required"
-        placeholder="Sua Senha"
+        placeholder="Sua senha"
       />
 
-      <x-form.buttonForm txt-reset="Limpar" txt-submit="Logar" />
+      <x-form.buttonForm txt-reset="Limpar" txt-submit="Entrar" />
 
     </form>
   </section>

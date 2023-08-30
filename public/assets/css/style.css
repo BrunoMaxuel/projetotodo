@@ -2,10 +2,10 @@
   --bg-light: #e9ecef;
   --color-textDark: #0A0040;
   --bg-white: #F6F5FF;
-  --color-primary: #495057;
-  --color-orange: #fe2919;
+  --color-primary: rgb(0,170, 255);
+  --color-primary-hover: rgb(252, 252, 252);
+  --color-secundary: rgb(0, 100, 200);
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -13,76 +13,45 @@
   font-family: Rubik, sans-serif;
   color: var(--color-textDark);
 }
-
-body {
-  width: 100vw;
-  height: 100%;
-  background-color: var(--bg-white);
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
-.siderbar {
-  width: 100px;
-  height: 100vh;
-  background-color: var(--color-primary);
-}
-
-.siderbar img {
-  margin-top: 30px;
-  max-width: 100%;
-  margin-bottom: 30px;
-}
-
-.siderbar .my_name {
-  padding-top: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-orange);
-  font-size: 13px;
-}
-
 nav {
-  height: 100px;
-  background-color: rgba(72, 80, 86, .08);
-  width: calc(100vw - 100px);
+  width: 100%;
+  height: 80px;
+  background-color: var(--color-primary);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-left: 20px;
+}
+.div-bar-left{
+  width: 50%;
+  display: flex;
+  margin: 10px;
+}
+.div-bar-left img{
+  width: 80px;
+  height: 70px;
+  margin-top: 5px;
+}
+.div-bar-right{
+  width: 50%;
+  display: flex;
+  justify-content: end;
 }
 .name_login{
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-  width: 120px;
-  height: 120px;
-  text-align: center;
-}
-.name_login p{
-  margin-bottom: 5px;
-  font-size: 30px;
+  font-size: 20px;
+  width: 100%;
+  margin-left: 30px;
+  line-height: 80px;
+  color: white;
 }
 .btn {
-  padding: 20px 30px;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  background-color: var(--color-secundary);
 }
-
 .btn:hover {
-  transform: scale(1.05);
-  background-color: var(--color-orange);
+  background-color: var(--color-primary-hover);
   cursor: pointer;
-  color: #fff;
+  color: black;
 }
 
 a.btn, button.btn {
@@ -93,7 +62,7 @@ a.btn, button.btn {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-secundary);
   color: white;
 }
 
@@ -237,47 +206,54 @@ h2 {
 
 #task_section {
   margin: auto;
-  padding-top: 20px;
+  margin-top: 50px;
+  background-color: var(--color-primary);
+  padding: 40px;
+  border-radius: 10px;
 }
 
 #task_section > h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: white;
 }
 
 .input_area {
   display: block;
-  margin: 10px 0 20px 0;
+  margin: 5px 0 15px 0;
 }
 
 .input_area > label {
   display: block;
   margin-bottom: 5px;
 }
-
 .input_area > input, .input_area > select {
-  height: 40px;
+  height: 45px;
   width: 400px;
   padding: 5px;
-  color: var(--color-primary);
-  font-size: 14px;
+  font-size: 23px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: rgba(255,255,255,0.5);
+  border: 1px solid black;
 }
 .input_area > textarea{
   height: 120px;
   width: 400px;
   padding: 5px;
   color: var(--color-primary);
-  font-size: 14px;
+  font-size: 21px;
   border-radius: 10px;
   border: 1px solid #ccc;
   background-color: rgba(255,255,255,0.5);
 }
+
 .input_area > input:focus, .input_area > select:focus, .input_area > textarea:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
+}
+.label-input{
+  font-size: 24px;
+  color: white;
 }
 .btn_create{
   display: inline-block;
@@ -286,7 +262,11 @@ h2 {
   color: #fff;
 }
 .submit:hover{
-  background-color: green;
+  background-color: var(--color-primary-hover);
+}
+.submit{
+  padding: 15px 40px 15px 40px;
+  margin-left: 28px !important;
 }
 
 .alert li {

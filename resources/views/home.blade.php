@@ -7,14 +7,15 @@
 
   @if($authUserIslogout)
     <x-slot:nameLogin>
-      {{$authUser->name}}
+      Bem-vindo,
+      {{$authUser->name}}!
     </x-slot:nameLogin>
   @endif
-  @if(!$authUserIslogout)
+  {{-- @if(!$authUserIslogout)
     <x-slot:nameLogin>
       Usuario Desconhecido
     </x-slot:nameLogin>
-  @endif
+  @endif --}}
 
 
   <section class="graph">
