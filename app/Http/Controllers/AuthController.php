@@ -7,12 +7,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+use function Termwind\render;
+
 class AuthController extends Controller
 {
   //
   public function index(Request $request)
   {
-//    dd(\Auth::user());
     if (Auth::check()){
       return redirect()->route('home');
     }else{
@@ -28,6 +29,8 @@ class AuthController extends Controller
     ]);
     if (Auth::attempt($validator)) {
       return redirect()->route('home');
+    }else{
+      return redirect('login');
     }
   }
 
@@ -36,7 +39,9 @@ class AuthController extends Controller
     if (Auth::check()){
       return redirect()->route('home');
     }
-    return view('register');
+    else{
+      return view('register');
+    }
   }
 
   public function register_action(Request $request)
@@ -60,6 +65,4 @@ class AuthController extends Controller
     Auth::logout();
     return redirect()->route('login');
   }
-
-
 }

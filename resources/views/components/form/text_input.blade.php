@@ -1,8 +1,8 @@
-<div class="input_area">
+<div class="input-div">
   <label class="label-input" for="{{$name}}">
     {{$label ?? ''}}
   </label>
-  <input
+  <input class="input"
     type="{{$type ?? ''}}"
     name="{{$name}}"
     id="{{$name}}"

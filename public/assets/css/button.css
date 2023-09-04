@@ -1,0 +1,36 @@
+.btn-white{
+  background: white;
+  color: black;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+}
+.btn-white:hover{
+  background:rgb(0, 100, 200);
+  color: white;
+  cursor: pointer;
+}
+/* button do login */
+.btn-white-login{
+  background: white;
+  color: black;
+  padding: 10px 30px 10px 30px;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
+  border: 0px;
+}
+.btn-white-login:hover{
+  background:rgb(0, 100, 200);
+  color: white;
+  cursor: pointer;
+}

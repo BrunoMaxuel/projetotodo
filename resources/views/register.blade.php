@@ -1,12 +1,10 @@
-<x-layout pageTitle="TodoDiaSoft Registrar-se" name-btn="Registre-se">
+<x-layout pageTitle="TodoDiaSoft Registrar-se">
   <x-slot:btn>
-    <x-button  href="{{route('login')}}" >Já Possui conta? Faça login</x-button>
+    <x-button  href="{{route('login')}}" >Fazer Login</x-button>
   </x-slot:btn>
 
-  <section id="task_section">
-
+  <section class="container-register">
     <h1>Registrar-se</h1>
-
     @if($errors->any())
       <ul class="alert alert-error">
         @foreach($errors->all() as $error)
@@ -14,7 +12,6 @@
         @endforeach
       </ul>
     @endif
-
     <form method="POST" action="{{route('user.register_action')}}">
       @csrf
       <x-form.text_input
@@ -45,9 +42,7 @@
         required="required"
         placeholder="Confirmar Senha"
       />
-
       <x-form.buttonForm txt-reset="Limpar" txt-submit="Registrar-se" />
-
     </form>
   </section>
 </x-layout>

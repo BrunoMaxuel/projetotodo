@@ -1,5 +1,3 @@
-<a href="{{$href}}" class="btn btn-primary">
+<a href="{{$href}}" class="btn-white">
   {{$slot}}
 </a>
-
-

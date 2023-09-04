@@ -26,7 +26,6 @@ class TaskController extends Controller
   public function create(Request $request)
   {
     $categories = Category::all();
-
     $data = [];
     $data['categories'] = $categories;
 

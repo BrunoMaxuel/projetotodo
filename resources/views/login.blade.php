@@ -1,12 +1,10 @@
 <x-layout pageTitle="TodoDiaSoft Login">
   <x-slot:btn>
-    <x-button  href="{{route('register')}}" >Cadastrar - se</x-button>
+    <x-button btn="btn-white" href="{{route('register')}}" >Registre-se</x-button>
   </x-slot:btn>
 
-  <section id="task_section">
-
+  <section class="container-login">
     <h1>Fazer login</h1>
-
     @if($errors->any())
       <ul class="alert alert-error">
         @foreach($errors->all() as $error)
@@ -17,7 +15,6 @@
 
     <form method="POST" action="{{route('user.login_action')}}">
       @csrf
-
       <x-form.text_input
         label="Email"
         name="email"
@@ -32,9 +29,7 @@
         required="required"
         placeholder="Sua senha"
       />
-
-      <x-form.buttonForm txt-reset="Limpar" txt-submit="Entrar" />
-
+          <x-form.buttonForm txtReset="Limpar" txtSubmit="Entrar" />
     </form>
   </section>
 </x-layout>
