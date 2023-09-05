@@ -9,6 +9,8 @@
       {{$authUser->name}}
     </x-slot:nameLogin>
   @endif
-  Aqui temos pagina de outros
-  nome: {{$name}}
+  @include('components.menu')
+  <div class="vender">
+    <input class="input-vendas" type="text" autofocus>
+  </div>
 </x-layout>

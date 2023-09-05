@@ -37,10 +37,28 @@ class HomeController extends Controller
     return view('home', ['authUser' => $authUser,'authUserIslogout' => $authUserIslogout]);
   }
 
-  public function outros(Request $request)
+  public function vender(Request $request)
   {
     $nameUser = Auth::user();
     $authUserIslogout = Auth::check();
-    return view('outros', ['name'=> 'bruno maxuel'], ['authUserIslogout' => $authUserIslogout, 'authUser'=> $nameUser]);
+    return view('vender', ['name'=> 'bruno maxuel'], ['authUserIslogout' => $authUserIslogout, 'authUser'=> $nameUser]);
+  }
+  public function vendaDia(Request $request)
+  {
+    $nameUser = Auth::user();
+    $authUserIslogout = Auth::check();
+    return view('vendaDoDia', ['name'=> 'bruno maxuel'], ['authUserIslogout' => $authUserIslogout, 'authUser'=> $nameUser]);
+  }
+  public function areaProdutos(Request $request)
+  {
+    $nameUser = Auth::user();
+    $authUserIslogout = Auth::check();
+    return view('areaProdutos', ['name'=> 'bruno maxuel'], ['authUserIslogout' => $authUserIslogout, 'authUser'=> $nameUser]);
+  }
+  public function areaClientes(Request $request)
+  {
+    $nameUser = Auth::user();
+    $authUserIslogout = Auth::check();
+    return view('areaClientes', ['name'=> 'bruno maxuel'], ['authUserIslogout' => $authUserIslogout, 'authUser'=> $nameUser]);
   }
 }

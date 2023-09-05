@@ -20,10 +20,13 @@ use App\Http\Controllers\TaskController;
 Route::middleware(['auth'])->group(function () {
   Route::get('/', [HomeController::class, 'index'])->name('home');
   Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+  Route::get('/vender', [HomeController::class, 'vender'])->name('vender');
+  Route::get('/vendaDia', [HomeController::class, 'vendaDia'])->name('vendaDoDia');
+  Route::get('/produtos', [HomeController::class, 'areaProdutos'])->name('areaProdutos');
+  Route::get('/clientes', [HomeController::class, 'areaClientes'])->name('areaClientes');
 });
 
 
-Route::get('/outros', [HomeController::class, 'outros'])->name('outros');
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login_action'])->name('user.login_action');
 Route::get('/register', [AuthController::class, 'register'])->name('register');

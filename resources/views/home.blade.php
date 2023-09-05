@@ -11,4 +11,6 @@
     </x-slot:nameLogin>
   @endif
   @include('components.menu')
+  @include('components.mainPanel')
+
 </x-layout>
